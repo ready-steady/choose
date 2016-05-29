@@ -3,6 +3,7 @@ package choose
 
 import (
 	"math"
+	"sort"
 )
 
 // UniformFloat64 returns the indices of n elements of a sequence such that the
@@ -50,6 +51,8 @@ func UniformFloat64(sequence []float64, n uint) []uint {
 		indices[i] = k
 		delete(pool, k)
 	}
+
+	sort.Sort(uints(indices))
 
 	return indices
 }

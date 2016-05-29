@@ -33,9 +33,14 @@ func TestUniformUint(t *testing.T) {
 			chosen:   []uint{11, 21, 31, 41, 51},
 		},
 		{
-			sequence: []uint{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 21, 25, 31, 35, 41},
+			sequence: []uint{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 21, 31, 35, 41},
 			choose:   5,
 			chosen:   []uint{1, 11, 21, 31, 41},
+		},
+		{
+			sequence: []uint{0, 2, 3, 40, 100},
+			choose:   4,
+			chosen:   []uint{0, 3, 40, 100},
 		},
 	}
 
