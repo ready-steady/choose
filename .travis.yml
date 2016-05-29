@@ -1,0 +1,5 @@
+language: go
+sudo: false
+
+notifications:
+  email: false
