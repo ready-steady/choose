@@ -17,12 +17,9 @@ func UniformFloat64(sequence []float64, n uint) []uint {
 			indices[i] = i
 		}
 		return indices
-	}
-
-	switch n {
-	case 0:
+	} else if n == 0 {
 		return []uint{}
-	case 1:
+	} else if n == 1 {
 		return []uint{0}
 	}
 
